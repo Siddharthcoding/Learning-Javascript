@@ -46,3 +46,27 @@ console.log(typeof heros);
 console.log(typeof myObj);
 console.log(typeof myFunction);
 
+
+
+//***************************** 
+
+// Stack(Primitive) - Variable copy, Heap(Non-Primitive) - refrence of original value
+
+let myName = "Siddharth"
+let anotherName = myName
+anotherName = "Sid"
+
+console.log(myName);
+console.log(anotherName);
+
+let userOne = {
+    email: "user@google.com",
+    up: "user@ybi",
+}
+
+let userTwo = userOne
+
+userTwo.email = "usertwo@google.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
