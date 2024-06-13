@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <h1>JS Tutorial</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const sayMyName = function(){
+        console.log("Siddharth");
+    }
+     const changeText = function(){
+        document.querySelector('h1').innerHTML = "Javascript"
+    }
+
+    // either give function name as refernce or declare the function 
+    // there itself() without name
+    const changeMe = setTimeout(sayMyName, 2000)  
+
+    // to stop an event
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(changeMe)
+        console.log("Stopped");
+    })
+</script>
+</html>
